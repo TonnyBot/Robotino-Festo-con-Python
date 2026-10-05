@@ -1,9 +1,27 @@
+"""
+##################################################################################
+#    Control de movimiento omnidireccional para Robotino Festo                   #
+#                                                                                #
+# Grupo: Vanguard(Robótica movil)                                                #
+# Fecha: 05/10/2026                                                              #
+# Institución: Universidad Peruana de Ciencias Aplicadas                         #
+# Versión: 1.0.0                                                                 #
+# Proyecto: Manejo de Robotino Festo con Python                                  #
+#                                                                                #
+# Descripción:                                                                   #
+#  El módulo implementa el control de movimiento omnidireccional para            #
+#  el Robotino Festo mediante peticiones HTTP POST a la API REST. Envía          #
+#  comandos de velocidad continuos en formato [Vx, Vy, Omega] para               #
+#  mantener activo el watchdog del robot y asegurar un frenado seguro.           #
+##################################################################################
+"""
+
 import time
 import requests
 
 # Configuración de conexión
 # Establecer la IP del robotino Festo
-IP_ROBOTINO = "127.0.0.1:12080"  
+IP_ROBOTINO = "192.168.0.2:12080"  
 URL_OMNIDRIVE = f"http://{IP_ROBOTINO}/data/omnidrive"
 
 # Formato de velocidad: [Vx (m/s), Vy (m/s), Omega (rad/s)]
