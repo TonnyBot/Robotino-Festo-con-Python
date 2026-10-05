@@ -1,9 +1,18 @@
 """
-Robotino Festo - Captura e Integración de Cámara en Vivo con OpenCV
-
-Este script realiza peticiones HTTP GET periódicas al endpoint de la cámara 
-del Robotino Festo, decodifica el flujo de bytes recibido en memoria y proyecta
-la señal de video en una ventana interactiva de OpenCV.
+##################################################################################
+#    Captura e integración de flujo de video en vivo para Robotino Festo         #
+#                                                                                #
+# Grupo: Vanguard(Robótica movil)                                                #
+# Fecha: 05/10/2026                                                              #
+# Institución: Universidad Peruana de Ciencias Aplicadas                         #
+# Versión: 1.0.0                                                                 #
+# Proyecto: Manejo de Robotino Festo con Python                                  #
+#                                                                                #
+# Descripción:                                                                   #
+#  El módulo realiza la captura de fotogramas del Robotino Festo mediante        #
+#  peticiones HTTP GET continuas. Convierte el flujo binario recibido a arreglos #
+#  NumPy de 8 bits y decodifica la imagen en tiempo real mediante OpenCV.        #
+##################################################################################
 """
 
 import time
